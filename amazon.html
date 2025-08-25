@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.com</title>
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            border: border-box;
+            font-family: "Amazon Ember", Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: #131A22;
+            display: flex;
+        }
+
+        .nav-left {
+            height: 60px;
+            width: 217.64px;
+            display: flex;
+
+        }
+
+        .logo {
+            height: 60px;
+            width: 114px;
+            padding: 5px 0px 0px 0px;
+            margin-left: 11px;
+            display: flex;
+
+        }
+
+        .amazon_logo {
+            background-image: url(amazon_logo.png);
+            height: 50px;
+            width: 100%;
+            background-size: cover;
+
+        }
+
+        .amazon_logo:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px;
+        }
+
+        .location {
+            height: 60px;
+            width: 90.64px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .location_layout {
+            width: 100%px;
+            height: 50px;
+            margin: 5px 0px 5px 0px;
+            padding: 0 8px 0 8px;
+            align-items: center;
+            display: flex;
+            line-height: 13px;
+
+
+        }
+
+        .location_logo {
+            background-image: url(location.png);
+            width: 16px;
+            height: 20px;
+            margin-top: 14px;
+            padding-right: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+        .deliver {
+            height: 50px;
+            color: #cccccc;
+            font-size: 12px;
+            margin-top: 15px;
+            margin-left: 1px;
+            width: 100%;
+        }
+
+        .india {
+            height: 20px;
+            font-size: 14px;
+            color: white;
+            margin-left: 2px;
+            width: 100%;
+            font-weight: 700;
+
+        }
+
+        .location_layout:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .complete_middle {
+            height: 60px;
+            width: 921.31px;
+        }
+
+        .entire_middle {
+            width: 901.31px;
+            height: 60px;
+            padding: 10px 4px 10px 3px;
+            margin: 0px 10px;
+            border-radius: 0px 4px 4px 0px;
+            display: flex;
+        }
+
+        .middle {
+            width: 901.31px;
+            height: 40px;
+            border-radius: 4px;
+            display: flex;
+        }
+
+        .middle:focus-within {
+            outline: 3px solid rgb(255, 145, 0);
+            position: relative;
+            z-index: 1;
+        }
+
+        .middle:has(.all_select:focus) {
+            outline: none;
+        }
+
+        .all_select {
+            height: 40px;
+            width: 51.6px;
+            padding-left: 5px;
+            background-color: #e6e6e6;
+            border: none;
+            color: #0f1111a9;
+            font-size: 13px;
+            border-radius: 4px 0px 0px 4px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .all {
+            width: 51.6px;
+            height: 40px;
+            background-color: #e6e6e6;
+            border-radius: 4px 0px 0px 4px;
+            transition: border 0.2s;
+        }
+
+        .all_select:hover {
+            background-color: #cccccc;
+            color: #0f1111;
+        }
+
+        .all_select:focus {
+            outline: 3px solid rgb(255, 145, 0);
+            z-index: 1;
+            position: relative;
+        }
+
+        .search_entire {
+            width: 797.71px;
+            height: 40px;
+            background-color: #ffffff;
+            font-size: 14px;
+            display: flex;
+            border: none;
+            outline: none;
+
+
+        }
+
+        .search_input {
+            width: 797.71px;
+            height: 38px;
+            border: none;
+            outline: none;
+            padding: 10px 10px 10px 6px;
+            font-size: 14px;
+            color: #0f1111;
+            display: flex;
+
+
+        }
+
+
+        .search_icon {
+            background-color: #febd69;
+            background-image: url(magnifying_glass.png);
+            background-repeat: no-repeat;
+            background-size: 38px;
+            height: 40px;
+            width: 45px;
+            border-radius: 0px 4px 4px 0px;
+        }
+
+        .search_button {
+            height: 40px;
+            width: 45px;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-radius: 0px 4px 4px 0px;
+        }
+
+        .right_nav {
+            width: 381.85px;
+            height: 60px;
+            color: #0f1111;
+            font-size: 14px;
+            display: flex;
+        }
+
+        .right_nav_tools {
+            width: 381.85px;
+            height: 58px;
+            margin-top: 2px;
+            padding: 3px 0 0 0;
+            display: flex;
+
+        }
+
+        .language {
+
+            width: 60.38px; 
+            height: 55px;
+            margin: 0px 1px 0 1px;
+            padding: 0px 6px 5px 7px;
+            align-items: center;
+            display: flex;
+            cursor: pointer;
+
+        }
+
+        .language_logo_EN_outer {
+            width: 45.38px;
+            height: 45px;
+            align-items: center;
+            display: flex;
+
+        }
+
+        .language button {
+            background-image: url(sort_down.png);
+            height: 4px;
+            width: 14px;
+            background-size: cover;
+            border: none;
+            outline: none;
+            background-color: #0f1111;
+            margin-left: 1px;
+            margin-top: 15px;
+            cursor: pointer;
+
+        }
+
+        .language_logo_EN_outer:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .outer_signin {
+            width: 141.53px;
+            height: 55px;
+            margin: 0px 0px 0px 2px;
+            padding-left: 9px;
+            padding-right: 9px;
+            display: flex;
+        }
+
+        .inner_signin {
+            width: 113.53px;
+            height: 50px;
+            margin: 0px 1px 0px 1px;
+            padding: 0px 0px 8px 4px;
+            align-items: center;
+
+
+        }
+
+        .outer_signin button {
+            background-image: url(sort_down.png);
+            background-size: cover;
+            border: none;
+            outline: none;
+            background-color: #0f1111;
+            width: 8px;
+            height: 4px;
+            margin-top: 31.5px;
+        }
+
+        .inner_signin:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .orders {
+            width: 76.95px;
+            height: 50px;
+            padding: 0 2px 10px;
+            margin: 0px 0px 0px 2px;
+            display: flex;
+
+        }
+
+        .orders:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .cart {
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 84px;
+            height: 50px;
+            margin: 0px 11px 0px 2px;
+            padding: 0px 9px 11px;
+        }
+
+        .cart_inner {
+            width: 66px;
+            height: 27px;
+            background-image: url(cart.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 9px;
+            cursor: pointer;
+        }
+
+        .cart:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .navbar_below {
+            width: 1520.8px;
+            height: 39px;
+            color: #0f1111;
+            background-color: #232f3e;
+            padding-left: 11px;
+            display: flex;
+        }
+
+        .below_all {
+            width: 58.41px;
+            height: 39px;
+        }
+
+        .below_all a {
+            width: 58.41px;
+            height: 39px;
+            padding: 8px 9px 8px 9px;
+            color: #fff;
+            font-size: 14px;
+            display: flex;
+            text-decoration: none;
+        }
+
+        .today_deal {
+            width: 104.81px;
+            height: 39px;
+            padding: 7px 3px 0px 5px;
+        }
+
+        #today_deals {
+            width: 94.81px;
+            height: 28px;
+            padding: 8px 4px;
+            font-size: 14px;
+
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .registry {
+            width: 71.79px;
+            height: 39px;
+            padding-top: 7px;
+
+            a {
+                padding: 8px 4px;
+                font-size: 14px;
+
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .prime {
+            width: 97.09px;
+            height: 39px;
+            padding-top: 7px;
+
+            a {
+                padding: 8px 4px;
+                font-size: 14px;
+
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .gift {
+            width: 82.99px;
+            height: 39px;
+            padding-top: 7px;
+
+            a {
+                padding: 8px 4px;
+                font-size: 14px;
+
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .customer {
+            width: 130.34px;
+            height: 39px;
+            padding-top: 7px;
+
+            a {
+                padding: 8px 4px;
+                font-size: 14px;
+
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .sell {
+            width: 33.38px;
+            height: 39px;
+            padding-top: 7px;
+
+            a {
+                padding: 8px 4px;
+                font-size: 14px;
+
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        .below_all:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .today_deal:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .registry:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .prime:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .gift:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .customer:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .sell:hover {
+            border: 0.05rem solid white;
+            border-radius: 2px 2px 2px 2px;
+        }
+
+        .page_content {
+            width: 1520.8px;
+            height: 4624.5px;
+            background-color: #e3e6e6;
+            padding: 0px 10px;
+
+        }
+
+        .main_image {
+            position: relative;
+            width: 100%;
+            height: 600px;
+
+            img {
+                position: absolute;
+
+                z-index: 1;
+
+            }
+
+        }
+
+        .main_image::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(to bottom, transparent, #e3e6e6);
+            z-index: 2;
+        }
+
+        .com {
+            width: 1460px;
+            height: 40px;
+            background-color: #f5f6f6;
+            position: absolute;
+            z-index: 3;
+            top: 250px;
+            left: 20.4px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding-top: 11px;
+            font-size: 14px;
+
+
+            a {
+                text-decoration: none;
+                color: #2162a1;
+
+
+            }
+
+
+        }
+
+        .com a:hover {
+            text-decoration: underline;
+        }
+
+        .boxes1 {
+            width: 1460px;
+            height: 420px;
+            position: absolute;
+            z-index: 3;
+            top: 310px;
+            display: flex;
+            justify-content: space-between;
+            left: 20.4px;
+
+
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            height: 420px;
+            width: 350px;
+            background-color: #ffffff;
+
+        }
+
+        .boxes2 {
+            width: 1460px;
+            height: 420px;
+            position: absolute;
+            z-index: 3;
+            top: 750px;
+            display: flex;
+            justify-content: space-between;
+            left: 20.4px;
+
+
+        }
+
+        .box5,
+        .box6,
+        .box7,
+        .box8 {
+            height: 420px;
+            width: 350px;
+            background-color: #ffffff;
+
+        }
+
+        .boxes3 {
+            width: 1460px;
+            height: 281.5px;
+            position: absolute;
+            z-index: 3;
+            left: 20.4px;
+            top: 1190px;
+            background-color: #ffffff;
+
+        }
+
+        .boxes4 {
+            width: 1460px;
+            height: 281.5px;
+            position: absolute;
+            z-index: 3;
+            left: 20.4px;
+            top: 1491.5px;
+            background-color: #ffffff;
+
+        }
+
+        .boxes5 {
+            width: 1460px;
+            height: 420px;
+            position: absolute;
+            z-index: 3;
+            top: 1793px;
+            display: flex;
+            justify-content: space-between;
+            left: 20.4px;
+
+
+        }
+
+        .box9,
+        .box10,
+        .box11,
+        .box12 {
+            height: 420px;
+            width: 350px;
+            background-color: #ffffff;
+
+        }
+
+        .boxes6 {
+            width: 1460px;
+            height: 281.5px;
+            position: absolute;
+            z-index: 3;
+            left: 20.4px;
+            top: 2233px;
+            background-color: #ffffff;
+        }
+
+        .boxes7 {
+            width: 1460px;
+            height: 281.5px;
+            position: absolute;
+            z-index: 3;
+            left: 20.4px;
+            top: 2534.5px;
+            background-color: #ffffff;
+        }
+
+        .boxes8 {
+            width: 1460px;
+            height: 420px;
+            position: absolute;
+            z-index: 3;
+            top: 2836px;
+            display: flex;
+            justify-content: space-between;
+            left: 20.4px;
+
+
+        }
+
+        .box13,
+        .box14,
+        .box15,
+        .box16 {
+            height: 420px;
+            width: 350px;
+            background-color: #ffffff;
+
+        }
+
+        .boxes9 {
+            width: 1460px;
+            height: 281.5px;
+            position: absolute;
+            z-index: 3;
+            left: 20.4px;
+            top: 3276px;
+            background-color: #ffffff;
+        }
+
+        .boxes10 {
+            width: 1460px;
+            height: 281.5px;
+            position: absolute;
+            z-index: 3;
+            left: 20.4px;
+            top: 3577.5px;
+            background-color: #ffffff;
+        }
+
+        .boxes11 {
+            width: 1460px;
+            height: 420px;
+            position: absolute;
+            z-index: 3;
+            top: 3879px;
+            display: flex;
+            justify-content: space-between;
+            left: 20.4px;
+
+
+        }
+
+        .box17,
+        .box18,
+        .box19,
+        .box20 {
+            height: 420px;
+            width: 350px;
+            background-color: #ffffff;
+        }
+
+        .boxes12 {
+            width: 1460px;
+            height: 281.5px;
+            position: absolute;
+            z-index: 3;
+            left: 20.4px;
+            top: 4319px;
+            background-color: #ffffff;
+        }
+
+        .last_content {
+            width: 1520.8px;
+            height: 208.2px;
+            padding-top: 40px;
+            line-height: 30px;
+        }
+
+        .inner_last_content {
+            width: 1520.8px;
+            height: 148.2px;
+            outline: 0.2px solid rgba(128, 128, 128, 0.301);
+            text-align: center;
+            padding-top: 40px;
+
+            justify-items: center;
+
+            button {
+                width: 243.06px;
+                height: 30px;
+                background-color: #fcd31f;
+                border-radius: 20px;
+                margin-top: 10px;
+                font-size: 13px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .inner_last_content button:hover {
+            background-color: #f9c836;
+        }
+
+        .back_to_top {
+            width: 1520.8px;
+            height: 49px;
+            background-color: #2d4461e9;
+            padding: 15px 0px;
+
+
+        }
+
+        .backk {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 13px;
+            text-align: center;
+            padding: 15px 0px;
+            font-weight: 500;
+        }
+
+        .back_to_top:hover {
+            background-color: #485769;
+        }
+
+        .center_footer {
+            width: 1520.8px;
+            height: 412.4px;
+            background-color: #232f3e;
+            padding-top: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            justify-content: center;
+            display: flex;
+        }
+
+        .center_footer_1 {
+            width: 136.05px;
+            height: 291.6px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+
+            a {
+                color: #dddddd;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 400;
+                display: block;
+                line-height: 120%;
+                margin-bottom: 10px;
+            }
+        }
+
+        .center_footer_2 {
+            width: 184.33px;
+            height: 291.6px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+
+            a {
+                color: #dddddd;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 400;
+                display: block;
+                line-height: 120%;
+                margin-bottom: 10px;
+            }
+        }
+
+        .center_footer_3 {
+            width: 222.21px;
+            height: 291.6px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+
+            a {
+                color: #dddddd;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 400;
+                display: block;
+                line-height: 120%;
+                margin-bottom: 10px;
+            }
+        }
+
+        .center_footer_4 {
+            width: 157.41px;
+            height: 291.6px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+
+            a {
+                color: #dddddd;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 400;
+                display: block;
+                line-height: 120%;
+                margin-bottom: 10px;
+            }
+        }
+
+        .center_footer a:hover {
+            text-decoration: underline;
+
+        }
+
+        .second_last_footer {
+            width: 1520.8px;
+            height: 331.4px;
+            background-color: #131A22;
+            padding-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* .second_last_footer:hover {
+            text-decoration: underline;
+        } */
+        .first_second_last_footer div:hover {
+            text-decoration: underline #999999 1px;
+        }
+
+        .second_second_last_footer div:hover {
+            text-decoration: underline #999999 1px;
+        }
+
+        .third_second_last_footer div:hover {
+            text-decoration: underline #999999 1px;
+        }
+
+        .forth_second_last_footer div:hover {
+            text-decoration: underline #999999 1px;
+        }
+
+        .fifth_second_last_footer div:hover {
+            text-decoration: underline #999999 1px;
+        }
+
+        .sixth_second_last_footer div:hover {
+            text-decoration: underline #999999 1px;
+        }
+
+        .seventh_second_last_footer div:hover {
+            text-decoration: underline #999999 1px;
+        }
+
+        .last_footer {
+            width: 1520.8px;
+            height: 29.2px;
+            padding: 10px;
+            justify-content: center;
+            display: flex;
+            background-color: #131A22;
+
+        }
+
+        .last_footer_inner {
+            a {
+                text-decoration: none;
+                color: #dddddd;
+            }
+        }
+
+        .last_footer_inner a:hover {
+            text-decoration: underline;
+
+        }
+
+        .box1_a {
+            text-decoration: none;
+            color: #2162a1;
+            font-size: 13px;
+        }
+
+        .box1_a:hover {
+            color: #232f3e;
+        }
+
+        .box2_a {
+            text-decoration: none;
+            color: #2162a1;
+            font-size: 13px;
+        }
+
+        .box2_a:hover {
+            color: #232f3e;
+        }
+
+        .box3_a {
+            text-decoration: none;
+            color: #2162a1;
+            font-size: 13px;
+        }
+
+        .box3_a:hover {
+            color: #232f3e;
+         }
+         .box4_a {
+            text-decoration: none;
+            color: #2162a1;
+            font-size: 13px;
+        }
+
+        .box4_a:hover {
+            color: #232f3e;
+         }
+    </style>
+</head>
+
+<body>
+    <div class="#top"></div>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="nav-left">
+                    <div class="logo">
+                        <div class="amazon_logo"></div>
+
+                    </div>
+                    <div class="location">
+                        <div class="location_layout">
+                            <div class="location_logo"></div>
+
+                            <div class="address">
+                                <span class="deliver">Deliver to</span>
+                                <span class="india"> India</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="complete_middle">
+                    <div class="entire_middle">
+                        <div class="middle">
+                            <div class="all">
+                                <select class="all_select" name="All" id="">
+                                    <option value="" disabled selected>All</option>
+                                </select>
+                            </div>
+                            <div class="search_entire">
+                                <input type="text" class="search_input" placeholder="Search Amazon">
+                            </div>
+                            <button class="search_button">
+                                <div class="search_icon">
+                                </div>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right_nav">
+                    <div class="right_nav_tools">
+                        <div class="language">
+                            <div class="language_logo_EN_outer">
+                                <img style="margin-top: 10px;" src="language_logo.png" height="14.2px" width="19.6px">
+                                <div
+                                    style="color: #ffffff; font-weight: bold; margin-left: 2px; margin-top: 10px; font-size: 13px;">
+                                    EN</div>
+                            </div>
+                            <button>
+                                <option value="" disabled selected></option>
+                            </button>
+                        </div>
+                        <div class="outer_signin">
+                            <div style="line-height: 15px; padding-top: 11px; " class="inner_signin">
+
+                                <span style=" color:#ffffff; width: 100.53px; height: 14px; font-size: 12px;">Hello,
+                                    sign in</span>
+
+
+
+                                <span
+                                    style=" font-size: 14px; color:#ffffff;height: 15px; width: 100.53px; font-weight: 700;">Account
+                                    & Lists</span>
+
+                            </div>
+                            <div> <button></button></div>
+
+                        </div>
+                        <div class="orders">
+                            <a href="" class="inner_orders">
+                                <div
+                                    style="font-size: 12px; width: 58.95px; height: 14px; margin-top: 9px; text-decoration: none; color: #ffffff;">
+                                    Returns</div>
+                                <div
+                                    style="font-size: 14px; padding-top: 2px; font-weight: 700; width: 60.95px; height: 15px; text-decoration: none; color: #ffffff;">
+                                    & Orders</div>
+                            </a>
+                        </div>
+                        <div class="cart">
+                            <div class="cart_inner"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="navbar_below">
+                <div class="below_all">
+                    <a href=""><img src="feed_lines.png" width="17px" height="20" alt=""> <span
+                            style="padding-left: 5px; padding-top: 2px; font-weight: 700;">All</span></a>
+                </div>
+                <div class="today_deal">
+                    <a id="today_deals" href="">Today's Deals</a>
+                </div>
+                <div class="registry">
+                    <a href="">Registry</a>
+                </div>
+                <div class="prime">
+                    <a href="">Prime Video</a>
+                </div>
+                <div class="gift">
+                    <a href="">Gift Cards</a>
+                </div>
+                <div class="customer">
+                    <a href="">Customer Service</a>
+                </div>
+                <div class="sell">
+                    <a href="">Sell</a>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="page_content">
+            <div class="main_image">
+                <img src="main_content.jpg" height="600px" width="1500px" style="margin:0px ;">
+                <div class="com"> <span>You are on amazon.com. You can also shop on Amazon India for millions of
+                        products with fast local delivery.</span>
+                    <a href="/">Click here to go to amazon.in</a>
+                </div>
+                <div class="boxes1">
+                    <div class="box1" style="padding: 20px 20px 15px 20px;">
+                        <h2 style="font-size: 21px; margin-bottom: 10px;">Get your game on</h2>
+                        <div style="height: 303.7px;"><img src="box1.jpg" style="cursor: pointer;" alt=""
+                                height="303.7px"></div>
+                        <div style="padding-top: 20px;">
+                            <a href="" class="box1_a">Shop gaming</a>
+                        </div>
+                    </div>
+                    <div class="box2" style="padding: 20px 20px 15px 20px;">
+                        <h2 style="font-size: 21px; margin-bottom: 10px;">Shop for your home essentials</h2>
+                        <div style="height: 303.7px;"><img src="box2.jpg.png" style="cursor: pointer;" alt=""
+                                height="303.7px" width="310px"></div>
+                        <div style="padding-top: 20px;">
+                            <a href="" class="box2_a">Discover more in Home</a>
+                        </div>
+                    </div>
+                    <div class="box3" style="padding: 20px 20px 15px 20px;">
+                        <h2 style="font-size: 21px; margin-bottom: 10px;">Fashion trends you like</h2>
+                        <div style="height: 303.7px;"><img src="box3.jpg.png" style="cursor: pointer;" alt=""
+                                height="303.7px" width="310px"></div>
+                        <div style="padding-top: 20px;">
+                            <a href="" class="box3_a">Explore more</a>
+                        </div>
+                    </div>
+                    <div class="box4" style="padding: 20px 20px 15px 20px;">
+                        <h2 style="font-size: 21px; margin-bottom: 10px;">Save big on school essentials</h2>
+                        <div style="height: 303.7px;"><img src="box4.jpg.png" style="cursor: pointer;" alt=""
+                                height="303.7px" width="310px"></div>
+                        <div style="padding-top: 20px;">
+                            <a href="" class="box4_a">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxes2">
+                    <div class="box5"></div>
+                    <div class="box6"></div>
+                    <div class="box7"></div>
+                    <div class="box8"></div>
+                </div>
+                <div class="boxes3"></div>
+                <div class="boxes4"></div>
+                <div class="boxes5">
+                    <div class="box9"></div>
+                    <div class="box10"></div>
+                    <div class="box11"></div>
+                    <div class="box12"></div>
+                </div>
+                <div class="boxes6"></div>
+                <div class="boxes7"></div>
+                <div class="boxes8">
+                    <div class="box13"></div>
+                    <div class="box14"></div>
+                    <div class="box15"></div>
+                    <div class="box16"></div>
+                </div>
+                <div class="boxes9"></div>
+                <div class="boxes10"></div>
+                <div class="boxes11">
+                    <div class="box17"></div>
+                    <div class="box18"></div>
+                    <div class="box19"></div>
+                    <div class="box20"></div>
+                </div>
+                <div class="boxes12"></div>
+            </div>
+
+        </div>
+        <div class="last_content">
+            <div class="inner_last_content">
+                <h2>See personalized recommendations</h2>
+                <div><a
+                        href="https://www.amazon.com/ap/signin?openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fref%3Drhf_sign_in&openid.assoc_handle=usflex&openid.pape.max_auth_age=0"><button
+                            type="submit">Sign
+                            in</button></a></div>
+                <div style="font-size: 11px; line-height: 22px; ">New customer? <a
+                        style="color: #2162a1; font-size: 11px;" href="">Start here.</a></div>
+            </div>
+        </div>
+        <footer>
+            <a href="#top" class="backk">
+                <div class="back_to_top">Back to top</div>
+            </a>
+            <div class="center_footer">
+                <div class="center_footer_1">
+                    <div style="margin: 6px 0px 14px 0px;">Get to Know Us</div>
+                    <a href="">Careers</a>
+                    <a href="">Blog</a>
+                    <a href="">About Amazon</a>
+                    <a href="">Investor Relations</a>
+                    <a href="">Amazon Devices</a>
+                    <a href="">Amazon Science</a>
+                </div>
+                <div style="width: 100px; height: 291.6px;"></div>
+                <div class="center_footer_2">
+                    <div style="margin: 6px 0px 14px 0px;">Make Money with Us
+                    </div>
+                    <a href="">Sell products on Amazon</a>
+                    <a href="">Sell on Amazon Business</a>
+                    <a href="">Sell apps on Amazon</a>
+                    <a href="">Become an Affiliate</a>
+                    <a href="">Advertise Your Products</a>
+                    <a href="">Self-Publish with Us</a>
+                    <a href="">Host an Amazon Hub</a>
+                    <a href="">›See More Make Money with Us</a>
+                </div>
+                <div style="width: 100px; height: 291.6px;"></div>
+                <div class="center_footer_3">
+                    <div style="margin: 6px 0px 14px 0px;">Amazon Payment Products</div>
+                    <a href="">Amazon Business Card</a>
+                    <a href="">Shop with Points</a>
+                    <a href="">Reload Your Balance</a>
+                    <a href="">Amazon Currency Converter</a>
+
+                </div>
+                <div style="width: 100px; height: 291.6px;"></div>
+                <div class="center_footer_4">
+                    <div style="margin: 6px 0px 14px 0px;">Let Us Help You</div>
+                    <a href="">Amazon and COVID-19</a>
+                    <a href="">Your Account</a>
+                    <a href="">Your Orders</a>
+                    <a href="">Shipping Rates & Policies</a>
+                    <a href="">Returns & Replacements</a>
+                    <a href="">Manage Your Content and Devices</a>
+                    <a href="">Help</a>
+                </div>
+            </div>
+            <div
+                style="height: 68px; width: 1520.8px;background-color: #232f3e; border-top: 0.001px solid rgb(126, 126, 126,40%); padding: 10px 440.4px; display: flex;">
+                <img src="amazon_logo.png" alt="" height="65px" width="95px" style="padding-top: 5px;">
+                <div
+                    style="width: 455.86px; height: 34.6px; margin: 8px 55px 0px 70px; padding: 0px 7.2px; display: flex; justify-content: space-between;">
+                    <div
+                        style="width: 131.98px; height: 33.8px; border: 1.5px solid rgb(221, 221, 221,50%); border-radius: 2.5px; padding-left: 16px; padding-top: 8px; display: flex;">
+                        <img src="globe.png" height="15px" width="15px" alt="">
+                        <p style="padding-left: 7px; font-size: 13px; color: #dddddd;">English</p>
+                        <div
+                            style="width: 8px; height: 20px; padding-left: 33px; padding-bottom: 10px; line-height: 0.05rem;">
+                            <img style=" width: 8px; transform: scaleY(-1); margin-bottom: 8px;" src="sort_down.png"
+                                alt=""><img style=" margin-bottom: 200px; width: 8px;" src="sort_down.png" alt="">
+                        </div>
+                    </div>
+                    <div
+                        style="width: 131.98px; height: 33.8px; border: 1.5px solid rgb(221, 221, 221,50%); border-radius: 2.5px;">
+                    </div>
+                    <div
+                        style="width: 131.98px; height: 33.8px; border: 1.5px solid rgb(221, 221, 221,50%); border-radius: 2.5px;">
+                    </div>
+                </div>
+            </div>
+            <div style="height: 30px; width: 1520.8px; background-color: #232f3e;"></div>
+            <div class="second_last_footer">
+                <div class="first_second_last_footer" style="height: 301.4px; width: 122.5px;line-height: 13px;">
+                    <div><a id="yoyo" href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">Amazon
+                            Music <div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Stream
+                                    millions
+                                    of songs</a></div></a></div>
+                    <div style="height: 30px;"></div>
+                    <div><a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">Amazon Business<div>
+                                <a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Everything
+                                    For
+                                    Your Business</a>
+                            </div></a></div>
+                    <div style="height: 30px;"></div>
+                    <div><a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">IMDbPro<div><a
+                                    style="font-size: 12px; color: #999999; text-decoration: none;" href="">Get Info
+                                    Entertainment
+                                    Professionals Need</a></div></a></div>
+                </div>
+                <div style="width: 23.75px; height: 301.4px;"></div>
+                <div class="second_second_last_footer" style="height: 301.4px; width: 122.5px;line-height: 13px;"><a
+                        href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">Amazon Ads <div><a
+                                class="foota"
+                                style="font-size: 12px; color: #999999; text-decoration: none; a:hover{text-decoration: underline;}"
+                                href="">Reach customers
+                                wherever they
+                                spend their time</a></div></a>
+                    <div style="height: 15px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        AmazonGlobal<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Ship
+                                Orders
+                                Internationally</a></div></a>
+                    <div style="height: 30px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        Kindle Direct Publishing<div><a style="font-size: 12px; color: #999999; text-decoration: none;"
+                                href="">Indie Digital & Print Publishing
+                                Made Easy</a></div></a>
+                    <div style="height: 20px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        eero WiFi<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Stream
+                                4K Video
+                                in Every Room</a></div></a>
+                </div>
+                <div style="width: 23.75px; height: 301.4px;"></div>
+                <div class="third_second_last_footer" style="height: 301.4px; width: 122.5px;line-height: 13px;"><a
+                        href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">Amazon Ads <div><a
+                                style="font-size: 12px; color: #999999; text-decoration: none;" href="">Reach customers
+                                wherever they
+                                spend their time</a></div></a>
+                    <div style="height: 15px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        AmazonGlobal<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Ship
+                                Orders
+                                Internationally</a></div></a>
+                    <div style="height: 30px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        Kindle Direct Publishing<div><a style="font-size: 12px; color: #999999; text-decoration: none;"
+                                href="">Indie Digital & Print Publishing
+                                Made Easy</a></div></a>
+                    <div style="height: 20px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        eero WiFi<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Stream
+                                4K Video
+                                in Every Room</a></div></a>
+                </div>
+                <div style="width: 23.75px; height: 301.4px;"></div>
+                <div class="forth_second_last_footer" style="height: 301.4px; width: 122.5px;line-height: 13px;"><a
+                        href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">Amazon Ads <div><a
+                                style="font-size: 12px; color: #999999; text-decoration: none;" href="">Reach customers
+                                wherever they
+                                spend their time</a></div></a>
+                    <div style="height: 15px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        AmazonGlobal<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Ship
+                                Orders
+                                Internationally</a></div></a>
+                    <div style="height: 30px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        Kindle Direct Publishing<div><a style="font-size: 12px; color: #999999; text-decoration: none;"
+                                href="">Indie Digital & Print Publishing
+                                Made Easy</a></div></a>
+                    <div style="height: 20px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        eero WiFi<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Stream
+                                4K Video
+                                in Every Room</a></div></a>
+                </div>
+                <div style="width: 23.75px; height: 301.4px;"></div>
+                <div class="fifth_second_last_footer" style="height: 301.4px; width: 122.5px;line-height: 13px;"><a
+                        href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">Amazon Ads <div><a
+                                style="font-size: 12px; color: #999999; text-decoration: none;" href="">Reach customers
+                                wherever they
+                                spend their time</a></div></a>
+                    <div style="height: 15px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        AmazonGlobal<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Ship
+                                Orders
+                                Internationally</a></div></a>
+                    <div style="height: 30px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        Kindle Direct Publishing<div><a style="font-size: 12px; color: #999999; text-decoration: none;"
+                                href="">Indie Digital & Print Publishing
+                                Made Easy</a></div></a>
+                    <div style="height: 20px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        eero WiFi<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Stream
+                                4K Video
+                                in Every Room</a></div></a>
+                </div>
+                <div style="width: 23.75px; height: 301.4px;"></div>
+                <div class="sixth_second_last_footer" style="height: 301.4px; width: 122.5px;line-height: 13px;"><a
+                        href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">Amazon Ads <div><a
+                                style="font-size: 12px; color: #999999; text-decoration: none;" href="">Reach customers
+                                wherever they
+                                spend their time</a></div></a>
+                    <div style="height: 15px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        AmazonGlobal<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Ship
+                                Orders
+                                Internationally</a></div></a>
+                    <div style="height: 30px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        Kindle Direct Publishing<div><a style="font-size: 12px; color: #999999; text-decoration: none;"
+                                href="">Indie Digital & Print Publishing
+                                Made Easy</a></div></a>
+                    <div style="height: 20px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        eero WiFi<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Stream
+                                4K Video
+                                in Every Room</a></div></a>
+                </div>
+                <div style="width: 23.75px; height: 301.4px;"></div>
+                <div class="seventh_second_last_footer" style="height: 301.4px; width: 122.5px;line-height: 13px;"><a
+                        href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">Amazon Ads <div><a
+                                style="font-size: 12px; color: #999999; text-decoration: none;" href="">Reach customers
+                                wherever they
+                                spend their time</a></div></a>
+                    <div style="height: 15px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        AmazonGlobal<div><a style="font-size: 12px; color: #999999; text-decoration: none;" href="">Ship
+                                Orders
+                                Internationally</a></div></a>
+                    <div style="height: 30px;"></div>
+                    <a href="" style="font-size: 12px; text-decoration: none; color: #dddddd;">
+                        Kindle Direct Publishing<div><a style="font-size: 12px; color: #999999; text-decoration: none;"
+                                href="">Indie Digital & Print Publishing
+                                Made Easy</a></div></a>
+                    <div style="height: 20px;"></div>
+
+                </div>
+            </div>
+            <div class="last_footer">
+                <div class="last_footer_inner"
+                    style="display: flex; height: 19.2px; width: 1520.8px; font-size: 12px; margin-left: 18px; justify-content: center;">
+                    <a href="">Conditions of Use</a>
+                    <div style="padding: 0px 7.2px 0px 7.2px;"></div>
+                    <a href="">Privacy Notice</a>
+                    <div style="padding: 0px 7.2px 0px 7.2px;"></div>
+                    <a href="">Consumer Health Data Privacy
+                        Disclosure</a>
+                    <div style="padding: 0px 7.2px 0px 7.2px;"></div>
+                    <a href="">Your Ads Privacy Choices</a>
+                    <div style="padding: 0px 7.2px 0px 7.2px;"></div>
+                    <img src="face.png" alt="" height="20px" width="20px" style="padding-bottom: 2px;">
+
+
+                </div>
+
+            </div>
+            <div style="height: 48px; width: 1520.8px; text-align: center ; ">
+                <p
+                    style="color: #dddddd; font-size: 12px; background-color: #131A22; background-color: #131A22; height: 48px;  ">
+                    © 1996-2025, Amazon.com, Inc. or its affiliates</p>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>
